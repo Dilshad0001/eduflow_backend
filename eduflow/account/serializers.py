@@ -15,8 +15,6 @@ class regserialiser(serializers.ModelSerializer):
         user.role=2
         user.save()
         return user
-
-
 class logserialiser(serializers.Serializer):
     email=serializers.EmailField()
     password=serializers.CharField()
