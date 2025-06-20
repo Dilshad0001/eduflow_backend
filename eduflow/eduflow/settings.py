@@ -2,7 +2,6 @@ from pathlib import Path
 import os
 import dj_database_url
 from datetime import timedelta
-
 # Base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -128,9 +127,14 @@ SIMPLE_JWT = {
 }
 
 # CORS: Allow frontend in dev
+# CORS_ALLOWED_ORIGINS = [
+#     "http://localhost:5173",  # You can update this later for production frontend
+# ]
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",  # You can update this later for production frontend
+    "http://localhost:5173",  # For local dev
+    "https://eduflow-frontend.vercel.app",  # For Vercel production frontend
 ]
+CORS_ALLOW_ALL_ORIGINS = True
 
 
 # from pathlib import Path
